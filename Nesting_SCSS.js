@@ -10,6 +10,10 @@
     h1 {
       font-family: Arial, Helvetica, sans-serif;
       color: cornflowerblue;
+
+      &:hover {
+        color: red;
+      }
       span {
         box-shadow: 1px 1px 1px red;
       }
