@@ -22,3 +22,23 @@
   button:hover {
     @include hover(red, green);
   }
+
+
+// If Check Mixin
+
+
+@mixin basetext-style($color: tomato, $backgroundColor: transparent) {
+  //   If statement !
+
+  @if $backgroundColor !=transparent {
+    background-color: $backgroundColor;
+  }
+
+  @if $color !=tomato {
+    color: $color;
+  }
+
+  font-size: $red;
+  margin-bottom: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
