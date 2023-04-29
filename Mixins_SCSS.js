@@ -27,7 +27,12 @@
 // If Check Mixin
 
 
-@mixin basetext-style($color: tomato, $backgroundColor: transparent) {
+@mixin basetext-style(
+  $color: tomato,
+  $backgroundColor: transparent,
+  $property,
+  $value
+) {
   //   If statement !
 
   @if $backgroundColor !=transparent {
@@ -38,7 +43,15 @@
     color: $color;
   }
 
+  @if ($property !=null) {
+    #{$property}: $value;
+  }
+
   font-size: $red;
   margin-bottom: 1rem;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+// Calling the function ! with @includes
+
+@include basetext-style(blueviolet, #fff, border, 0.2rem solid #333);
